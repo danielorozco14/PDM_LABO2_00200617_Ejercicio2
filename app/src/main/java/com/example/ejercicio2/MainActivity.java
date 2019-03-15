@@ -48,8 +48,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (viewID){
             case R.id.pic1:
-                img1.setImageResource(R.drawable.paisaje1);
+                img1.setImageResource(R.drawable.paisaje3);
                 break;
+            case R.id.pic2:
+                img1.setImageResource(R.drawable.paisaje3);
+                break;
+            case R.id.pic3:
+                img1.setImageResource(R.drawable.paisaje3);
+                break;
+            case R.id.pic4:
+                img1.setImageResource(R.drawable.paisaje3);
+                break;
+            case R.id.pic5:
+                img1.setImageResource(R.drawable.paisaje3);
+                break;
+            case R.id.pic6:
+                img1.setImageResource(R.drawable.paisaje3);
+                break;
+            case R.id.pic7:
+                img1.setImageResource(R.drawable.paisaje3);
+                break;
+            case R.id.pic8:
+                img1.setImageResource(R.drawable.paisaje3);
+                break;
+            case R.id.pic9:
+                img1.setImageResource(R.drawable.paisaje3);
+                break;
+
 
         }
     }
