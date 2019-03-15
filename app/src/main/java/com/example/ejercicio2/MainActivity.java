@@ -51,28 +51,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 img1.setImageResource(R.drawable.paisaje3);
                 break;
             case R.id.pic2:
-                img2.setImageResource(R.drawable.paisaje3);
+                img2.setImageResource(R.drawable.paisaje1);
                 break;
             case R.id.pic3:
-                img3.setImageResource(R.drawable.paisaje3);
+                img3.setImageResource(R.drawable.paisaje2);
                 break;
             case R.id.pic4:
-                img4.setImageResource(R.drawable.paisaje3);
+                img4.setImageResource(R.drawable.paisaje1);
                 break;
             case R.id.pic5:
-                img5.setImageResource(R.drawable.paisaje3);
+                img5.setImageResource(R.drawable.paisaje2);
                 break;
             case R.id.pic6:
                 img6.setImageResource(R.drawable.paisaje3);
                 break;
             case R.id.pic7:
-                img7.setImageResource(R.drawable.paisaje3);
+                img7.setImageResource(R.drawable.paisaje2);
                 break;
             case R.id.pic8:
-                img8.setImageResource(R.drawable.paisaje3);
+                img8.setImageResource(R.drawable.paisaje2);
                 break;
             case R.id.pic9:
-                img9.setImageResource(R.drawable.paisaje3);
+                img9.setImageResource(R.drawable.paisaje1);
                 break;
 
 
