@@ -2,20 +2,33 @@ package com.example.ejercicio2;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
+    private ArrayList<Integer> randList= new ArrayList<>();
+    Random rand = new Random();
     private GridLayout mGridLayout;
     private ImageView img1,img2,img3,img4,img5,img6,img7,img8,img9;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mGridLayout=findViewById(R.id.gridLayout);
+
+        //OBTENIENDO LOS ID DE LAS IMAGENES Y AGREGANDOLAS A LA LISTA
+
+        randList.add(R.drawable.paisaje1);
+        randList.add(R.drawable.paisaje2);
+        randList.add(R.drawable.paisaje3);
+
 
         img1=findViewById(R.id.pic1);
         img2=findViewById(R.id.pic2);
@@ -26,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         img7=findViewById(R.id.pic7);
         img8=findViewById(R.id.pic8);
         img9=findViewById(R.id.pic9);
-
+        //COLOCANDO LOS LISTENER EN CADA IMAGEVIEW
         img1.setOnClickListener(this);
         img2.setOnClickListener(this);
         img3.setOnClickListener(this);
@@ -43,39 +56,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        int viewID=v.getId();
-        Log.i("id",viewID+"");
+        ImageView Img = findViewById(v.getId());
+        int indiceLista = (int)rand.nextInt(randList.size());
+        System.out.println("ID "+indiceLista);
+        Img.setImageResource(randList.get(indiceLista));
 
-        switch (viewID){
-            case R.id.pic1:
-                img1.setImageResource(R.drawable.paisaje3);
-                break;
-            case R.id.pic2:
-                img2.setImageResource(R.drawable.paisaje1);
-                break;
-            case R.id.pic3:
-                img3.setImageResource(R.drawable.paisaje2);
-                break;
-            case R.id.pic4:
-                img4.setImageResource(R.drawable.paisaje1);
-                break;
-            case R.id.pic5:
-                img5.setImageResource(R.drawable.paisaje2);
-                break;
-            case R.id.pic6:
-                img6.setImageResource(R.drawable.paisaje3);
-                break;
-            case R.id.pic7:
-                img7.setImageResource(R.drawable.paisaje2);
-                break;
-            case R.id.pic8:
-                img8.setImageResource(R.drawable.paisaje2);
-                break;
-            case R.id.pic9:
-                img9.setImageResource(R.drawable.paisaje1);
-                break;
-
-
-        }
     }
 }
